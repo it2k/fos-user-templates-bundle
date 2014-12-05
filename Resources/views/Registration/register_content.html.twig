@@ -1,0 +1,8 @@
+<form action="{{ path('fos_user_registration_register') }}" {{ form_enctype(form) }} method="POST" class="fos_user_registration_register form-signin" role="form">
+    {{ form_widget(form) }}
+    <button class="btn btn-lg btn-primary btn-block" type="submit">{{ 'registration.submit'|trans({}, 'FOSUserBundle') }}</button>
+</form>
+<ul>
+    <li><a href="{{ path('fos_user_security_login') }}">{{ 'security.login.submit'|trans({}, 'FOSUserBundle') }}</a></li>
+    <li><a href="{{ path('fos_user_resetting_request') }}">{{ 'resetting.request.submit'|trans({}, 'FOSUserBundle') }}</a></li>
+</ul>

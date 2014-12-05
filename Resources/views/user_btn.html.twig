@@ -1,0 +1,19 @@
+{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+    <div class="btn-group"><img class="img-circle" src="{{ gravatar(app.user.email, 70) }}" data-toggle="dropdown" data-placement="left" title="{{ app.user.username }}"/> <span class="caret"></span>
+        <ul class="dropdown-menu" style="text-align: left;right: auto; left: 0;" role="menu">
+            <li><a href="{{ path('fos_user_profile_edit') }}">{{ 'profile.edit.submit'|trans({}, 'FOSUserBundle') }}</a></li>
+            <li><a href="{{ path('fos_user_change_password') }}">{{ 'change_password.submit'|trans({}, 'FOSUserBundle') }}</a></li>
+            <li class="divider"></li>
+            <li><a href="{{ path('fos_user_security_logout') }}">{{ 'layout.logout'|trans({}, 'FOSUserBundle') }}</a></li>
+        </ul>
+    </div>
+{% else %}
+    <div class="btn-group"><img class="img-circle" src="{{ gravatar('', 70) }}" data-toggle="dropdown" data-placement="left""/> <span class="caret"></span>
+        <ul class="dropdown-menu" style="text-align:left; right: auto; left: 0;" role="menu">
+            <li><a href="{{ path('fos_user_security_login') }}">{{ 'security.login.submit'|trans({}, 'FOSUserBundle') }}</a></li>
+            <li><a href="{{ path('fos_user_registration_register') }}">{{ 'registration.submit'|trans({}, 'FOSUserBundle') }}</a></li>
+            <li class="divider"></li>
+            <li><a href="{{ path('fos_user_resetting_request') }}">{{ 'resetting.request.submit'|trans({}, 'FOSUserBundle') }}</a></li>
+        </ul>
+    </div>
+{% endif %}

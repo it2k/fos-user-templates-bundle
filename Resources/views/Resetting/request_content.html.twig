@@ -1,0 +1,20 @@
+{% if invalid_username is defined %}
+    <div class="alert alert-danger alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <li>
+            {{ 'resetting.request.invalid_username'|trans({'%username%': invalid_username}, 'FOSUserBundle') }}
+        </li>
+    </div>
+{% endif %}
+
+<form action="{{ path('fos_user_resetting_send_email') }}" method="POST" class="fos_user_resetting_request form-signin" role="form">
+    <div class="stacked">
+        <input class="form-control form-control-one" placeholder="{{ 'resetting.request.username'|trans({}, 'FOSUserBundle') }}" type="text" id="username" name="username" required="required" autofocus />
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">{{ 'resetting.request.submit'|trans({}, 'FOSUserBundle') }}</button>
+</form>
+<ul>
+    <li><a href="{{ path('fos_user_security_login') }}">{{ 'security.login.submit'|trans({}, 'FOSUserBundle') }}</a></li>
+    <li><a href="{{ path('fos_user_registration_register') }}">{{ 'registration.submit'|trans({}, 'FOSUserBundle') }}</a></li>
+</ul>
+

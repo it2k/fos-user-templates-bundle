@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block fos_user_content_title %}{% endblock fos_user_content_title %}</title>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 100px;
+            padding-bottom: 40px;
+            background-color: #eee;
+        }
+        .form-signin {
+            max-width: 350px;
+            padding: 15px;
+            margin: 0 auto;
+        }
+        .form-signin .form-signin-heading,
+        .form-signin .checkbox {
+            margin-bottom: 10px;
+        }
+        .form-signin .checkbox {
+            font-weight: normal;
+        }
+        .form-signin .form-control {
+            position: relative;
+            height: auto;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .form-signin .form-control:focus {
+            z-index: 2;
+        }
+        .form-signin .btn-block {
+            margin-top: 10px;
+        }
+        .stacked .form-control {
+            border-radius: 0;
+        }
+        .my-page-header {
+            margin-top: 50px;
+        }
+        .my-text-center {
+            text-align: center;
+        }
+        .stacked .form-control {
+            border-radius: 0;
+            margin-bottom: -1px;
+        }
+        .stacked .form-control2:first-child {
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+        }
+        .stacked .form-control:last-child {
+            /*border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;*/
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+<!-- Begin page content -->
+<div class="container">
+    <div class="row">
+        <div class="my-page-header">
+            <div class="col-md-4 col-md-offset-4">
+                {% block fos_user_content %}
+                {% endblock fos_user_content %}
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /container -->
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
