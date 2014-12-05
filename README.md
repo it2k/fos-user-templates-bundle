@@ -1,0 +1,4 @@
+FOSUserTemplatesBundle
+======================
+
+Templates for FOSUserBundle 
