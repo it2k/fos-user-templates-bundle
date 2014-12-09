@@ -13,7 +13,7 @@ Before, install and configure [FOSUserBundle](https://github.com/FriendsOfSymfon
 
 Install with *Composer*:
 
-`composer require it2k/fos-user-templates-bundle 1.x`
+`composer require it2k/fos-user-templates-bundle 1.*`
 
 Add lines to AppKernel.php
 
