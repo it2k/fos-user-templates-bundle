@@ -9,13 +9,13 @@ Templates for FOSUserBundle
 - Gravatar support
 
 ##Installation
-Before, install and configure [FOSUserBundle](https://github.com/FriendsOfSymfony/FOSUserBundle)
+- Install and configure [FOSUserBundle](https://github.com/FriendsOfSymfony/FOSUserBundle)
 
-Install with *Composer*:
+- Install FOSUserTemplatesBundle with *Composer*:
 
 `composer require it2k/fos-user-templates-bundle 1.*`
 
-Add lines to AppKernel.php
+- Add lines to AppKernel.php
 
 ```php
 
